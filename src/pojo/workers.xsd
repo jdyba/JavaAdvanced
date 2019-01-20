@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.kuban.org/animals"
+        xmlns:tns="http://www.kuban.org/animals" elementFormDefault="qualified">
+
+
+    <element name="workers">
+        <complexType>
+            <sequence>
+                <element name="Director" type="tns:Director" minOccurs="0" maxOccurs="unbounded"></element>
+                <element name="Tradesman" type="tns:Tradesman" minOccurs="0" maxOccurs="unbounded"></element>
+            </sequence>
+        </complexType>
+    </element>
+
+
+    <complexType name="Director">
+        <sequence>
+            <element name="pesel" type="string"></element>
+            <element name="name" type="string"></element>
+            <element name="lastName" type="string"></element>
+            <element name="position" type="string"></element>
+            <element name="income" type="int"></element>
+            <element name="phone" type="int"></element>
+            <element name="addition" type="int"></element>
+            <element name="card" type="string"></element>
+            <element name="limit" type="int"></element>
+        </sequence>
+    </complexType>
+
+    <complexType name="Tradesman">
+        <sequence>
+            <element name="pesel" type="string"></element>
+            <element name="name" type="string"></element>
+            <element name="lastName" type="string"></element>
+            <element name="position" type="string"></element>
+            <element name="income" type="int"></element>
+            <element name="phone" type="int"></element>
+            <element name="provision" type="int"></element>
+            <element name="limit" type="int"></element>
+        </sequence>
+    </complexType>
+</schema>
